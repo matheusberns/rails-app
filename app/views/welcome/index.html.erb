@@ -1,5 +1,6 @@
 <h1>Seja bem vindo</h1>
-<p> A data de hoje é: <%= Date.today%> </p>
+<h2>Você está em ambiente de: <strong style="color: forestgreen"> <%= ambiente_rails %> </strong> </h2>
+<p> <strong>Data:</strong> <%= data_br(Date.today)%> </p>
 <ul>
   <li>
     <%= link_to "Cadastro de Moedas", coins_path %>
