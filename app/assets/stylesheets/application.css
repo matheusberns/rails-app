@@ -12,4 +12,11 @@
  *
  *= require_tree .
  *= require_self
- */
+*/
+.sup{
+    width: 100%;
+    height: 100px;
+    background-color: #29303b;
+    padding: 0;
+
+}

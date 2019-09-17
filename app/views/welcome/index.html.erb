@@ -1,9 +1,13 @@
 <h1>Seja bem vindo</h1>
 <h2>Você está em ambiente de: <strong style="color: forestgreen"> <%= ambiente_rails %> </strong> </h2>
 <p> <strong>Data:</strong> <%= data_br(Date.today)%> </p>
+<%= render "menu"%>
 <ul>
   <li>
     <%= link_to "Cadastro de Moedas", coins_path %>
+  </li>
+  <li>
+    <p>Teste: <%= @teste %></p>
   </li>
 </ul>
 
