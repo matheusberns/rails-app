@@ -1,15 +1,19 @@
 module ApplicationHelper
-  def data_br(data_us)
-    data_us.strftime("%d/%m/%Y")
-  end
-
   def ambiente_rails
     if Rails.env.development?
-      "Desenvolvimento"
+      t('amb_dev.dev')
     elsif Rails.env.production?
-      "Produção"
+      t('amb_dev.production')
     else
       "Teste"
+    end
+  end
+
+  def language_image
+    if I18n.locale == :en
+           "http://www.novomilenio.inf.br/porto/mapas/images/usband.gif"
+    else
+      "https://www.pinclipart.com/picdir/middle/158-1582812_brasil-icons-icon-brasil-clipart.png"
     end
   end
 end

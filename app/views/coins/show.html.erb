@@ -15,5 +15,15 @@
   <img><%= image_tag @coin.url_image, size: "25x25" %></img>
 </p>
 
-<%= link_to 'Edit', edit_coin_path(@coin) %> |
+<p>
+  <strong>Cotação:</strong>
+  <img><%= @coin.cotacao %></img>
+</p>
+
+<p>
+  <strong>Mining Type:</strong>
+  <img><%= @coin.mining_type.description %></img>
+</p>
+
+<%= link_to 'Edit', edit_coin_path(@coin) %>
 <%= link_to 'Back', coins_path %>

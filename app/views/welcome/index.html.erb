@@ -1,14 +1,13 @@
-<h1>Seja bem vindo</h1>
-<h2>Você está em ambiente de: <strong style="color: forestgreen"> <%= ambiente_rails %> </strong> </h2>
-<p> <strong>Data:</strong> <%= data_br(Date.today)%> </p>
-<%= render "menu"%>
+<h1><%=t('titles.welcome')%></h1>
+
+<p style="font-size: 18px;"><strong style="font-size: 18px;">Data:</strong> <%= l(Date.today) %> </p>
+<%= render "menu" %>
 <ul>
   <li>
-    <%= link_to "Moedas", coins_path %>
-    <%= link_to "Tipos de mineração", mining_types_path %>
+    <strong style="font-size: 18px;"><%= link_to t('activerecord.models.coin.other'), coins_path %></strong>
   </li>
   <li>
-    <p>Teste: <%= @teste %></p>
+    <strong style="font-size: 18px;"><%= link_to t('activerecord.models.mining_type.other'), mining_types_path %></strong>
   </li>
 </ul>
 

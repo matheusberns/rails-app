@@ -31,3 +31,12 @@
 
 en:
   hello: "Hello world"
+  actual_locale: "English"
+  titles:
+    welcome: "Welcome"
+  languages:
+    current_language: "Language"
+  amb_dev:
+    message: "You are in environment: "
+    dev: "Development"
+    production: "Production"

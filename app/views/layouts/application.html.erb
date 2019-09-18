@@ -1,17 +1,29 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>CryptoWallet</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title>CryptoWallet</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track'=> 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track'=> 'reload' %>
-  </head>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
 
-  <body>
-  <div class="sup"></div>
+</head>
 
-    <%= yield %>
-  </body>
+<body>
+<div class="sup">
+  <p class="ambt"><%=t('amb_dev.message')%><strong class="rfss"><%= ambiente_rails %> </strong></p>
+  <ul class="locale">
+    <li>
+      <%= link_to 'Português', '/?locale=pt-BR' %>
+    </li>
+    <li>
+      <%= link_to 'English', '/?locale=en' %>
+    </li>
+  </ul>
+  <p class="locale iline"><%= image_tag language_image, width: 30, height: 18 %> <%= t('actual_locale') %></p>
+</div>
+
+<%= yield %>
+</body>
 </html>
