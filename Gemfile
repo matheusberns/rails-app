@@ -1,8 +1,9 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
+# Ruby 2.6.4
 ruby '2.6.4'
-#i18n - Internalization
+# i18n - Internalization
 gem 'rails-i18n', '~> 5.1'
 # Use pry in Rails Console
 gem 'pry-rails', :group => :development
@@ -10,6 +11,8 @@ gem 'pry-rails', :group => :development
 gem 'rails', '~> 5.2.0'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
+# Autenticador Devise
+gem 'devise'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets

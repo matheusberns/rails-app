@@ -11,9 +11,14 @@ module ApplicationHelper
 
   def language_image
     if I18n.locale == :en
-           "http://www.novomilenio.inf.br/porto/mapas/images/usband.gif"
+      "http://www.novomilenio.inf.br/porto/mapas/images/usband.gif"
     else
       "https://www.pinclipart.com/picdir/middle/158-1582812_brasil-icons-icon-brasil-clipart.png"
     end
   end
+
+  def user_name
+    current_user.email.split('@')[0].capitalize
+  end
+
 end

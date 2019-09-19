@@ -1,6 +1,9 @@
 'pt-BR':
   activerecord:
     models:
+      user:
+        one: Usuario
+        other: Usuários
       coin:
         one: Moeda
         other: Moedas
@@ -8,6 +11,10 @@
         one:  Tipo de Mineração
         other: Tipos de Mineração
     attributes:
+      user:
+        id: Código
+        user: Usuário
+        password: Senha
       coin:
         id: Código
         description: Descrição

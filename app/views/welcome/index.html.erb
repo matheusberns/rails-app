@@ -1,14 +1,28 @@
-<h1><%=t('titles.welcome')%></h1>
+<h1><%= t('titles.welcome') %></h1>
 
 <p style="font-size: 18px;"><strong style="font-size: 18px;">Data:</strong> <%= l(Date.today) %> </p>
 <%= render "menu" %>
 <ul>
-  <li>
-    <strong style="font-size: 18px;"><%= link_to t('activerecord.models.coin.other'), coins_path %></strong>
-  </li>
-  <li>
-    <strong style="font-size: 18px;"><%= link_to t('activerecord.models.mining_type.other'), mining_types_path %></strong>
-  </li>
+  <% if user_signed_in? %>
+
+    <h2>Olá, <%=user_name%></h2>
+    <li>
+      <strong style="font-size: 18px;"><%= link_to t('activerecord.models.coin.other'), coins_path %></strong>
+    </li>
+    <li>
+      <strong style="font-size: 18px;"><%= link_to t('activerecord.models.mining_type.other'), mining_types_path %></strong>
+    </li>
+    <li>
+      <strong style="font-size: 18px;"><%= link_to t('activerecord.models.user.other'), control_users_index_path %></strong>
+    </li>
+    <li>
+      <strong style="font-size: 18px;"><%= link_to "Logout", destroy_user_session_path, method: :delete %></strong>
+    </li>
+  <% else %>
+    <li>
+      <strong style="font-size: 18px;"><%= link_to "Login", new_user_session_path, method: :get %></strong>
+    </li>
+  <% end %>
 </ul>
 
 

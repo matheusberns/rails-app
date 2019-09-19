@@ -6,6 +6,8 @@
   <%= csp_meta_tag %>
 
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => 'reload' %>
+  <%= stylesheet_link_tag 'scaffolds', media: 'all', 'data-turbolinks-track' => 'reload' %>
+
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
 
 </head>
@@ -22,6 +24,7 @@
     </li>
   </ul>
   <p class="locale iline"><%= image_tag language_image, width: 30, height: 18 %> <%= t('actual_locale') %></p>
+  <p class="rails"><%= image_tag 'rails.png', width: 100, height: 100 %></p>
 </div>
 
 <%= yield %>
