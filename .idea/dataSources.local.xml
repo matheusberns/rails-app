@@ -4,5 +4,15 @@
     <data-source name="development" uuid="f5aa637c-5e99-465e-bcb0-b0487b9e59bb">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
     </data-source>
+    <data-source name="Rails crypto_wallet: development" uuid="07f5093e-31ba-4b04-ab1f-97468669770a">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <auth-required>false</auth-required>
+      <first-sync>true</first-sync>
+    </data-source>
+    <data-source name="Rails crypto_wallet: test" uuid="3988180f-779d-42b8-8ae8-7748a971a0cf">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <auth-required>false</auth-required>
+      <first-sync>true</first-sync>
+    </data-source>
   </component>
 </project>

@@ -1,5 +1,7 @@
 class User < ApplicationRecord
-  enum role: [:"Usuário", :"Admin"]
+  acts_as_paranoid
+
+  enum role: [:user, :admin]
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,

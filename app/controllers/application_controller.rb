@@ -1,5 +1,9 @@
 class ApplicationController < ActionController::Base
-  before_action :set_locale
+  include Pundit
+  protect_from_forgery with: :exception
+  # before_action :set_locale
+
+  rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
 
   def set_locale
     if params[:locale]
@@ -11,5 +15,13 @@ class ApplicationController < ActionController::Base
         I18n.locale = cookies[:locale]
       end
     end
+  end
+
+  private
+
+  def user_not_authorized
+
+    flash[:notice] = "Você não tem permissão para fazer esta ação"
+    redirect_to(welcome_index_path)
   end
 end

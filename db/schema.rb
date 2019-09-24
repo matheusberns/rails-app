@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_19_184248) do
+ActiveRecord::Schema.define(version: 2019_09_23_180942) do
+
+  create_table "cars", force: :cascade do |t|
+    t.string "company"
+    t.string "model"
+    t.integer "horse_power"
+    t.decimal "torque"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "coins", force: :cascade do |t|
     t.string "description"
@@ -19,7 +28,9 @@ ActiveRecord::Schema.define(version: 2019_09_19_184248) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "mining_type_id"
-    t.float "cotacao"
+    t.float "price"
+    t.datetime "deleted_at"
+    t.index ["deleted_at"], name: "index_coins_on_deleted_at"
     t.index ["mining_type_id"], name: "index_coins_on_mining_type_id"
   end
 
@@ -33,6 +44,16 @@ ActiveRecord::Schema.define(version: 2019_09_19_184248) do
   create_table "mining_types", force: :cascade do |t|
     t.string "description"
     t.string "acronym"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.datetime "deleted_at"
+    t.index ["deleted_at"], name: "index_mining_types_on_deleted_at"
+  end
+
+  create_table "people", force: :cascade do |t|
+    t.string "name"
+    t.integer "age"
+    t.string "genre"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -49,6 +70,8 @@ ActiveRecord::Schema.define(version: 2019_09_19_184248) do
     t.datetime "remember_created_at"
     t.string "name"
     t.integer "role", default: 0
+    t.datetime "deleted_at"
+    t.index ["deleted_at"], name: "index_users_on_deleted_at"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

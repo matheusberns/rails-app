@@ -18,6 +18,7 @@ Rails.application.config.assets.precompile += %w( coins.css
                                                   scaffolds.css
                                                   users.css
                                                   sessions.css
+                                                  layout.css
                                                  )
 Rails.application.config.assets.precompile += %w( cable.js
                                                   coins.js

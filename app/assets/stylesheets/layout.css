@@ -1,0 +1,16 @@
+.side-nav{
+    margin-left: -33px;
+    margin-top: -33px;
+    width: 100%;
+    height: 15%;
+    background-color: #29303b;
+    position: absolute;
+}
+.yield {
+    margin-top: 80px;
+
+}
+.btn-entrar {
+    color: white;
+    font-weight: bold;
+}

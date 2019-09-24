@@ -1,0 +1,62 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_self
+
+*/
+
+
+.content {
+  background-color: #eee;
+  padding: 20px;
+  margin: 0 -20px; /* indenta o padding negativo para preservar o grid */
+  -webkit-border-radius: 0 0 6px 6px;
+  -moz-border-radius: 0 0 6px 6px;
+  border-radius: 0 0 6px 6px;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+  box-shadow: 0 1px 2px rgba(0,0,0,.15);
+}
+.sup{
+    width: 100%;
+    height: 100px;
+    background-color: #29303b;
+    padding: 0;
+}
+.ambt{
+    padding: 10px 0 0 10px;
+    color: whitesmoke;
+    font-size: 18px;
+    height: 8px;
+}
+.rfss{
+    color: forestgreen;
+    font-weight: bold;
+}
+.locale{
+    margin-right: 10px;
+    margin-top: 0px;
+    color: whitesmoke;
+}
+.iline {
+    margin-top: -10px;
+    margin-left: 10px;
+}
+.rails {
+    float: right;
+    margin-top: -115px;
+}
+
+
+
+
+

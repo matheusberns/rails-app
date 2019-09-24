@@ -61,4 +61,10 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+
+  # Config of Better Errors
+  BetterErrors::Middleware.allow_ip! ENV['TRUSTED_IP'] if ENV['TRUSTED_IP']
+  # Allow usage of better_errors on Vagrant
+  BetterErrors::Middleware.allow_ip! "10.1.1.11"
+  config.consider_all_requests_local = true
 end

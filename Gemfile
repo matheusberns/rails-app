@@ -1,12 +1,26 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
+
+
 # Ruby 2.6.4
 ruby '2.6.4'
+# Twilio Ruby
+gem 'twilio-ruby'
+# Ransack
+gem 'ransack'
+# Pundit
+gem 'pundit'
+# Colorize
+gem 'colorize'
+# Paranoia
+gem 'paranoia', '~> 2.4', '>= 2.4.2'
+# Bootstrap
+gem 'bootstrap-sass'
+# JQuery
+gem 'jquery-rails', '~> 4.3', '>= 4.3.5'
 # i18n - Internalization
 gem 'rails-i18n', '~> 5.1'
-# Use pry in Rails Console
-gem 'pry-rails', :group => :development
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
 # Use sqlite3 as the database for Active Record
@@ -45,20 +59,35 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  # Rspec-Rails
+  gem 'rspec-rails', '~> 3.8', '>= 3.8.2'
 end
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  # Spring speeds up development by keeping your application runniquitng in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+
+  # Use pry in Rails Console
+  gem 'pry-rails'
+
+  # Active Record Query Trace
+  gem 'active_record_query_trace'
+
+  # Better Errors
+  gem 'better_errors'
+  gem 'binding_of_caller'
+
+  # Pry byebug
+  gem 'pry-byebug'
 end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '>= 2.15', '< 4.0'
+  gem 'capybara', '~> 2.7', '>= 2.7.1'
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'

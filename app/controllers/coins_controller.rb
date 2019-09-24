@@ -6,7 +6,9 @@ class CoinsController < ApplicationController
   # GET /coins
   # GET /coins.json
   def index
-    @coins = Coin.all
+    @q = Coin.ransack(params[:q])
+    @coins = @q.result(distinct: true)
+    logger.info("Moedas carregadas com sucesso!".green)
   end
 
   # GET /coins/1
@@ -76,7 +78,7 @@ class CoinsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def coin_params
-    params.require(:coin).permit(:description, :acronym, :url_image, :mining_type_id, :cotacao)
+    params.require(:coin).permit(:description, :acronym, :url_image, :mining_type_id, :price)
   end
 
 end
